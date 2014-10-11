@@ -60,7 +60,7 @@ This is a handler that will connect to the SoftLayer API and change Global IP ro
 
 * Create API user on SoftLayer Portal. 
 * Generate API Key
-* Get Object ID using something similar to the ```get_object_id.py 192.168.1.2```
+* Get Object ID using something similar to the ```softlayer.py 192.168.1.2```
 * Add API, object_id, username, and IP to ```softlayer.json``` configuration file
   * object_id is the actual Global IP
   * route_to is the IP you want to route the Global IP to. 
