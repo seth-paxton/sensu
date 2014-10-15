@@ -1,4 +1,3 @@
-# cat sensu_jsongen.py
 #!/usr/bin/env python
 #
 # Generate sensu client file. This is mainly used with Salt to generate the
