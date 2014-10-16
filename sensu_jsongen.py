@@ -6,7 +6,7 @@
 #
 # Takes three optional arguments:
 # --subscriptions: Creates new subscriptions, overwriting previous entries
-# --append: Adds new entries to the exisiting list
+# --add: Adds new entries to the exisiting list
 # --remove: Removes entries from the exiting list
 #
 # Seth Paxton - Layered Communications
@@ -23,8 +23,8 @@ config_name = 'client.json'
 parser = argparse.ArgumentParser(description='Sensu Client JSON generator')
 parser.add_argument('--subscriptions', help='Set Subscriptions \
     (e.g. sensu_json.py sub1 sub2 sub3)', nargs='+')
-parser.add_argument('--append', help='Append Subscriptions \
-    (e.g. sensu_json.py --append sub4)', nargs='+') 
+parser.add_argument('--add', help='Append Subscriptions \
+    (e.g. sensu_json.py --add sub4)', nargs='+') 
 parser.add_argument('--remove', help='Remove Subscriptons \
     (e.g. sensu_json.py --remove sub4)', nargs='+')
 
@@ -42,9 +42,9 @@ def get_subs():
         get_client_subs = load_client_json['client']['subscriptions']
         return get_client_subs
 
-# Retrieves the current list of subscriptions and appends new ones 
-if args.append:
-    subscriptions = get_subs() + args.append
+# Retrieves the current list of subscriptions and adds new ones 
+if args.add:
+    subscriptions = get_subs() + args.add
 
 # Retrieves the current list of subscriptions and removes values specified 
 if args.remove:

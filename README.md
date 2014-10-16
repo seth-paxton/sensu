@@ -28,10 +28,10 @@ Generates the following:
 
 **Note**: The hostname and IP address is automatically added. 
 
-You can also append new subscriptions: 
+You can also add new subscriptions: 
 
 ```
-./sensu_jsongen.py --append test1 test2
+./sensu_jsongen.py --add test1 test2
 ```
 
 Generates the following:
@@ -79,7 +79,7 @@ Run the following Salt command to generate the new client file. This can be used
 
 ```
 salt 'hostname.example.com' cmd.script salt://sensu/sensu_jsongen.py args="--subscriptions sub1 sub2"
-salt 'hostname.example.com' cmd.script salt://sensu/sensu_jsongen.py args="--append sub3 sub4"
+salt 'hostname.example.com' cmd.script salt://sensu/sensu_jsongen.py args="--add sub3 sub4"
 salt 'hostname.example.com' cmd.script salt://sensu/sensu_jsongen.py args="--remove sub3 sub4"
 ```
 
