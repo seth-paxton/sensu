@@ -28,7 +28,7 @@ Generates the following:
 
 **Note**: The hostname and IP address is automatically added. 
 
-You can also append new subscriptions. 
+You can also append new subscriptions: 
 
 ```
 ./sensu_jsongen.py --append test1 test2
@@ -52,12 +52,35 @@ Generates the following:
     }
 
 
+You can also remove old subscriptions:
+
+```
+./sensu_jsongen.py --remove test1 test2
+```
+
+Generates the following:
+
+
+    {
+       "client:{
+         "subscriptions":[
+           "sub1",
+           "sub2",
+           "sub3"
+         ],
+       "name":"hostname.example.com",
+       "address":"192.168.1.100"
+      }
+    }
+
+
 #### Salt
 Run the following Salt command to generate the new client file. This can be used to generate client files across hundreds of servers. 
 
 ```
 salt 'hostname.example.com' cmd.script salt://sensu/sensu_jsongen.py args="--subscriptions sub1 sub2"
 salt 'hostname.example.com' cmd.script salt://sensu/sensu_jsongen.py args="--append sub3 sub4"
+salt 'hostname.example.com' cmd.script salt://sensu/sensu_jsongen.py args="--remove sub3 sub4"
 ```
 
 check-netstat-tcp
