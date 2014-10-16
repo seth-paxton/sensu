@@ -17,8 +17,7 @@ import argparse
 import os.path
 import sys
 
-#config_path = '/etc/sensu/conf.d'
-config_path = '/tmp'
+config_path = '/etc/sensu/conf.d'
 config_name = 'client.json'
 
 parser = argparse.ArgumentParser(description='Sensu Client JSON generator')
