@@ -57,7 +57,7 @@ if args.subscriptions:
     subscriptions = args.subscriptions
 
 # Generate the client.json file
-client_json = json.dumps({'client':{'name': socket.gethostname(), 'address': \
+client_json = json.dumps({'client':{'name': socket.getfqdn(), 'address': \
     socket.gethostbyname(socket.gethostname()), 'subscriptions': \
     # Argparse converts 'nargs=+' to list. Needed list items as strings. 
     [arguments for arguments in subscriptions]}}, \
