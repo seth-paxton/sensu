@@ -128,3 +128,11 @@ This is a handler that will connect to the SoftLayer API and change Global IP ro
 lvs-metrics.rb
 ======================
 Polls LVS (Linux Virtual Server) metrics from a server and sends them to Graphite. 
+
+mysql-custom-checks.rb
+======================
+Custom checks for MySQL. This script parses output issues to MySQL and uses the output for various checks. 
+
+check-dir-size.rb
+======================
+Provides a way to check the size of a directory in Linux and alerts if it surpasses set threshold. 
