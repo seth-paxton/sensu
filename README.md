@@ -136,3 +136,7 @@ Custom checks for MySQL. This script parses output issues to MySQL and uses the 
 check-dir-size.rb
 ======================
 Provides a way to check the size of a directory in Linux and alerts if it surpasses a set threshold. 
+
+metrics-ipsec.rb
+======================
+Strongswan metrics plugin that pulls the bytes output from statusall
